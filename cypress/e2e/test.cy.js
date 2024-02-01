@@ -10,8 +10,9 @@ describe('Test”', () => {
     
     it('Search product and verfy quantiti in the second item from the second results page', () => {
         cy.visit('https://www.aliexpress.us/w/wholesale-instax-mini.html?page=2&g=y&SearchText=instax+mini');
-        searchResultPage.getElementByPosition();
+        searchResultPage.openProductPreviewByPosition();
         cy.wait(5000);
+        cy.log(">>> >>> >>> SCRIPT TERMINADO <<< <<< <<<");
     });
 
 });

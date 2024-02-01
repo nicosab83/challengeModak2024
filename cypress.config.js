@@ -7,7 +7,7 @@ module.exports = defineConfig({
     },
     "baseUrl": 'https://www.aliexpress.us/?gatewayAdapt=glo2usa',
     watchForFileChanges: true,
-    defaultCommandTimeout: 180000,
+    defaultCommandTimeout: 5000,
     pageLoadTimeout: 180000
   },
 });
