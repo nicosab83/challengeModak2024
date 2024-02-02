@@ -7,6 +7,5 @@ export class HomePage {
 
     searchProduct(product) {
         cy.get(this.searchInput).type(product).type('{enter}');
-
     };
 };

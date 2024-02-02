@@ -22,11 +22,15 @@ describe('Search Test Set', () => {
 
     it('Search product and verify quantity in the second item from the second results page', () => {
         homePage.searchProduct(data.product);
-        searchResultPage.jumpToResultPage(2);
-        searchResultPage.openProductPageByPosition(1);
+        searchResultPage.jumpToResultPage(data.productNumber);
+        searchResultPage.openProductByPosition(data.productNumber);
         productPage.getNumberOfPiecesAvailable().then((number) => {
             expect(number).to.be.gte(1);
         });
+    });
+
+    afterEach(() => {
+        cy.window().then((win) => win.close());
     });
 
 });
